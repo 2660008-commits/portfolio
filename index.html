@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>혜전대학교 사회복지과 미니 포트폴리오</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 상단 헤더 & 테마 전환 버튼 -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-badge">
+        <span class="badge-icon">🌱</span>
+        <span class="badge-text">혜전대학교 사회복지과</span>
+      </div>
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="화면 모드 전환" title="화면 모드 전환">
+        <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+        <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
+        <span class="theme-label">밝게</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 메인 소개 (Hero Section) -->
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="hero-tag">예비 사회복지사 포트폴리오</div>
+      <h1 class="hero-title">
+        따뜻한 시선과 실천으로,<br>
+        <span class="highlight-text">이웃의 행복을 함께 만드는</span> 포트폴리오
+      </h1>
+      <p class="hero-desc">
+        교수님, 학우 여러분, 복지기관 관계자 여러분 환영합니다.<br>
+        전공 수업과 실습을 통해 정성껏 제작한 시각 콘텐츠와 미디어 작품들을 모았습니다.
+      </p>
+    </section>
+
+    <!-- 카테고리 필터 탭 -->
+    <section class="filter-section" aria-label="작품 분류 필터">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">
+          <span class="btn-text">전체보기</span>
+          <span class="filter-count" id="count-all">0</span>
+        </button>
+        <button class="filter-btn" data-filter="image">
+          <span class="btn-text">🖼️ 이미지</span>
+          <span class="filter-count" id="count-image">0</span>
+        </button>
+        <button class="filter-btn" data-filter="video">
+          <span class="btn-text">🎬 영상</span>
+          <span class="filter-count" id="count-video">0</span>
+        </button>
+        <button class="filter-btn" data-filter="audio">
+          <span class="btn-text">🎧 오디오</span>
+          <span class="filter-count" id="count-audio">0</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 작품 카드 그리드 -->
+    <section class="works-section">
+      <div class="works-grid" id="worksGrid">
+        <!-- script.js에서 동적으로 카드가 렌더링됩니다 -->
+      </div>
+      <!-- 필터 결과 없을 때 메시지 -->
+      <div id="emptyNotice" class="empty-notice" style="display: none;">
+        <p class="empty-emoji">📂</p>
+        <p class="empty-text">해당 카테고리의 작품이 아직 준비 중입니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 라이트박스 모달 (크게 보기 / 영상 및 오디오 재생) -->
+  <div id="mediaModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="창 닫기">✕</button>
+      
+      <!-- 미디어 뷰 영역 (이미지, 비디오, 오디오가 동적으로 삽입됨) -->
+      <div class="modal-media-wrap" id="modalMediaWrap">
+        <!-- JS 동적 삽입 -->
+      </div>
+
+      <!-- 작품 상세 설명 영역 -->
+      <div class="modal-info-wrap">
+        <div class="modal-header-info">
+          <span class="modal-category" id="modalCategory">카테고리</span>
+          <h2 class="modal-title" id="modalTitle">작품 제목</h2>
+        </div>
+        <p class="modal-desc" id="modalDesc">작품에 대한 상세 설명이 표시됩니다.</p>
+        <div class="modal-tags" id="modalTags">
+          <!-- 태그 목록 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">© 혜전대학교 사회복지과 학생 작품 포트폴리오</p>
+      <p class="footer-note">따뜻한 마음으로 세상을 변화시키는 사회복지 실천을 지향합니다.</p>
+      <p style="font-size: 0.75rem; color: var(--text-sub); margin-top: 0.8rem;">Google AI Studio로 기획하고 직접 수정했습니다.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
